@@ -109,7 +109,7 @@
     <setupTask
         xsi:type="projects:ProjectsImportTask">
       <sourceLocator
-          rootFolder="${git.clone.bndtools}"
+          rootFolder="${git.clone.bndtools.location}"
           locateNestedProjects="true"/>
     </setupTask>
   </stream>
