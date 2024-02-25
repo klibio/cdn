@@ -15,7 +15,7 @@
       name="bnd.workspace"
       label="bnd Workspace">
     <stream
-        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='eclemma']/@streams[name='master']"/>
+        href="https://cdn.klib.io/oomph/setups-github/bndtools/bnd.setup#//@streams[name='master']"/>
     <description>The bnd workspace provides cool stuff.</description>
   </workspace>
   <description>The bnd configuration provides cool stuff.</description>
