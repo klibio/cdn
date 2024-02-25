@@ -83,15 +83,27 @@
       </description>
     </setupTask>
     <setupTask
-        xsi:type="setup.p2:P2Task">
-      <requirement
-          name="bndtools.main.feature.feature.group"/>
-      <requirement
-          name="bndtools.m2e.feature.feature.group"/>
-      <requirement
-          name="bndtools.pde.feature.feature.group"/>
-      <repository
-          url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
+        xsi:type="setup:CompoundTask"
+        name="bndtools">
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="org.eclipse.ui">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui/defaultPerspectiveId"
+            value="bndtools.perspective"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="bndtools.main.feature.feature.group"/>
+        <requirement
+            name="bndtools.m2e.feature.feature.group"/>
+        <requirement
+            name="bndtools.pde.feature.feature.group"/>
+        <repository
+            url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
+      </setupTask>
     </setupTask>
   </stream>
   <logicalProjectContainer
