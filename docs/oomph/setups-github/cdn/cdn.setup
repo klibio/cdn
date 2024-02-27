@@ -5,23 +5,26 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
     xmlns:jdt="http://www.eclipse.org/oomph/setup/jdt/1.0"
-    xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
+    xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/projects/1.0 index:/models/Projects.ecore"
-    name="bndtools"
-    label="bndtools/bnd">
-  <annotation
-      source="ConfigurationReference">
-    <reference
-        href="https://cdn.klib.io/oomph/setups-github/BndConfiguration.setup#/"/>
-  </annotation>
+    xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/JDT.ecore http://www.eclipse.org/oomph/predicates/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/SetupWorkingSets.ecore"
+    name="cdn.klib.io"
+    label="cdn.klib.io">
   <setupTask
       xsi:type="jdt:JRETask"
-      version="JavaSE-17"
-      location="${jre.location-17}"
-      name="JRE for JavaSE-17">
+      version="JavaSE-21"
+      location="${jre.location-21}"
+      name="JRE for JavaSE-21">
     <description>Define the JRE needed to compile and run the Java projects of ${scope.project.label}</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:EclipseIniTask"
+      option="-Xmx"
+      value="2048m"
+      vm="true">
+    <description>Set the heap space needed to work with the projects of ${scope.project.label}</description>
   </setupTask>
   <setupTask
       xsi:type="setup:ResourceCreationTask"
@@ -49,8 +52,8 @@
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
-      id="git.clone.bndtools"
-      remoteURI="bndtools/bnd">
+      id="git.clone.cdn.klib.io"
+      remoteURI="klibio/cdn.git">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail
@@ -69,88 +72,31 @@
     <description>${scope.project.label}</description>
   </setupTask>
   <setupTask
-      xsi:type="setup:CompoundTask"
-      name="preferences">
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="org.eclipse.core.resources">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.core.resources/missingNatureMarkerSeverity"
-          value="-1"/>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="org.eclipse.ui">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui/defaultPerspectiveId"
-          value="bndtools.perspective"/>
-    </setupTask>
+      xsi:type="setup.workingsets:WorkingSetTask"
+      prefix="com.github.cdn.klib.io-">
+    <workingSet
+        name="${scope.project.name}">
+      <predicate
+          xsi:type="predicates:AndPredicate">
+        <operand
+            xsi:type="predicates:RepositoryPredicate"
+            project="setups-github"/>
+      </predicate>
+    </workingSet>
+    <description>The dynamic working sets for ${scope.project.label}</description>
   </setupTask>
-  <setupTask
-      xsi:type="setup:CompoundTask"
-      name="eclipse.ini">
+  <stream name="main"
+      label="Main">
     <setupTask
         xsi:type="setup:EclipseIniTask"
-        option="-Xmx"
-        value="2048m"
+        option="-Doomph.redirection.cdn.klib.io"
+        value="=https://raw.githubusercontent.com/klibio/cdn.git/main/docs/oomph/setups-github/cdn/cdn.setup->${git.clone.cdn.klib.io.location|uri}/docs/oomph/setups-github/cdn/cdn.setup"
         vm="true">
-      <description>Set the heap space needed to work with the projects of ${scope.project.label}</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:EclipseIniTask"
-        excludedTriggers="STARTUP"
-        option="-perspective"
-        value="bndtools.perspective"/>
-  </setupTask>
-  <stream name="master"
-      label="Master">
-    <setupTask
-        xsi:type="setup:EclipseIniTask"
-        disabled="true"
-        option="-Doomph.redirection.bndtools"
-        value="=https://raw.githubusercontent.com/bndtools/bnd/master/.../BndtoolsBnd.setup->${git.clone.bndtools.location|uri}/.../BndtoolsBnd.setup"
-        vm="true">
-      <description>
-        Set an Oomph redirection system property to redirect the logical location of this setup to its physical location in the Git clone.
-        Before enabling this task, replace '...' with the repository path of this setup's containing project.
-      </description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="bndtools">
-      <setupTask
-          xsi:type="setup.p2:P2Task"
-          label="bndtools">
-        <requirement
-            name="bndtools.main.feature.feature.group"/>
-        <requirement
-            name="bndtools.m2e.feature.feature.group"/>
-        <requirement
-            name="bndtools.pde.feature.feature.group"/>
-        <repository
-            url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
-      </setupTask>
-      <setupTask
-          xsi:type="setup.p2:P2Task"
-          label="JRE">
-        <requirement
-            name="a.jre.org.eclipse.justj.openjdk.hotspot.jre.full"
-            versionRange="[17.0.0,17.0.0]"/>
-        <repository
-            url="https://download.eclipse.org/justj/jres/17/updates/release"/>
-      </setupTask>
-    </setupTask>
-    <setupTask
-        xsi:type="projects:ProjectsImportTask">
-      <sourceLocator
-          rootFolder="${git.clone.bndtools.location}"
-          locateNestedProjects="true"/>
+      <description>Set an Oomph redirection system property to redirect the logical location of this setup to its physical location in the Git clone.</description>
     </setupTask>
   </stream>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
       href="index:/org.eclipse.setup#//@projectCatalogs[name='com.github']"/>
-  <description>bndtools/bnd provides cool stuff.</description>
+  <description>cdn.klib.io provides cool stuff.</description>
 </setup:Project>
