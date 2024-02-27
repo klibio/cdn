@@ -6,10 +6,11 @@
     xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
     xmlns:jdt="http://www.eclipse.org/oomph/setup/jdt/1.0"
     xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
+    xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/JDT.ecore http://www.eclipse.org/oomph/predicates/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/SetupWorkingSets.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/JDT.ecore http://www.eclipse.org/oomph/predicates/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 index:/models/Projects.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/SetupWorkingSets.ecore"
     name="cdn.klib.io"
     label="cdn.klib.io">
   <setupTask
@@ -93,6 +94,12 @@
         value="=https://raw.githubusercontent.com/klibio/cdn.git/main/docs/oomph/setups-github/cdn/cdn.setup->${git.clone.cdn.klib.io.location|uri}/docs/oomph/setups-github/cdn/cdn.setup"
         vm="true">
       <description>Set an Oomph redirection system property to redirect the logical location of this setup to its physical location in the Git clone.</description>
+    </setupTask>
+    <setupTask
+        xsi:type="projects:ProjectsImportTask">
+      <sourceLocator
+          rootFolder="${git.clone.cdn.klib.io.location}"
+          locateNestedProjects="true"/>
     </setupTask>
   </stream>
   <logicalProjectContainer
