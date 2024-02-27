@@ -116,7 +116,8 @@
         xsi:type="setup:CompoundTask"
         name="bndtools">
       <setupTask
-          xsi:type="setup.p2:P2Task">
+          xsi:type="setup.p2:P2Task"
+          label="bndtools">
         <requirement
             name="bndtools.main.feature.feature.group"/>
         <requirement
@@ -125,6 +126,15 @@
             name="bndtools.pde.feature.feature.group"/>
         <repository
             url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="JRE">
+        <requirement
+            name="a.jre.org.eclipse.justj.openjdk.hotspot.jre.full"
+            versionRange="[17.0.0,17.0.0]"/>
+        <repository
+            url="https://download.eclipse.org/justj/jres/17/updates/release"/>
       </setupTask>
     </setupTask>
     <setupTask
