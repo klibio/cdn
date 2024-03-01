@@ -1,0 +1,26 @@
+= cdn.klib.io
+
+provisioning of p2 repos
+
+== oomph-usage
+
+experiments on oomph / eclipse-installer usages
+
+=== Links
+
+==== oomph
+
+* https://github.com/eclipse-oomph[Github - Eclipse Oomph,window=_blank]
+* https://wiki.eclipse.org/Eclipse_Oomph_Authoring[Eclipse Oomph
+Authoring,window=_blank]
+* https://download.eclipse.org/oomph/[oomph download site,window=_blank]
+
+==== oomph add-ons
+
+* https://github.com/a-langer/eclipse-oomph-console[Github - Console
+Oomph Installer]
+
+==== misc
+
+* https://help.eclipse.org/latest/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fmisc%2Fruntime-options.html[Eclipse
+runtime options]
