@@ -1,6 +1,6 @@
 = cdn.klib.io
 
-provisioning of p2 repos
+This repo contains p2 repos and oomph setups for provisioning purposes.
 
 == oomph-usage
 

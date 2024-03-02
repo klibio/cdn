@@ -27,3 +27,4 @@ download/
 target/
 wrk/
 .DS_Store
+docs/oomph/setups/
