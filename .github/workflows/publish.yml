@@ -40,10 +40,9 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-pages-artifact@v1
       with:
-        path: docs
+        path: docs/_site
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v2
-      with:
-        path: docs
+
 
