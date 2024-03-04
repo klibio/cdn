@@ -27,5 +27,5 @@ download/
 target/
 wrk/
 .DS_Store
-docs/oomph/setups/
+oomph/setups/
 Gemfile.lock
