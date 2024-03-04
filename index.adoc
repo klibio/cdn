@@ -11,3 +11,8 @@ link:oomph/index.html[oomph/EclipseInstaller configurations]
 
 * link:org.bndtools.p2/6.4.1/[https://klibio.github.io/cdn/org.bndtools.p2/6.4.1/]
 * link:org.bndtools.p2/7.0.0/[https://klibio.github.io/cdn/org.bndtools.p2/7.0.0/]
+
+== Sizer
+
+* https://www.brianapps.net/sizer4/[Sizer 4.0 by ]
+* link:sizer/[Sizer] / link:sizer/SizerExport.xml[sizer config file]

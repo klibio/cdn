@@ -11,26 +11,20 @@ eclipse oomph setup
 
 requires oomph app and registerd protocal handler
 
-https://github.com/eclipse-oomph/oomph[eclipse-oomph/oomph]
+link:https://github.com/eclipse-oomph/oomph[github: eclipse-oomph/oomph]
 
-https://www.eclipse.org/setups/installer/?url=https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/configurations/OomphConfiguration.setup&show=true[image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=eclipse-oomph/oomph&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[Create
-Eclipse Dev Env for eclipse-oomph/oomph]]
+link:https://www.eclipse.org/setups/installer/?url=https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/configurations/OomphConfiguration.setup&show=true[image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=eclipse-oomph/oomph&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray]
 
-eclipse+installer:https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/configurations/OomphConfiguration.setup[image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=eclipse-oomph/oomph&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[Launch
-Eclipse Dev Env for eclipse-oomph/oomph]]
+link:eclipse+installer:https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/configurations/OomphConfiguration.setup[image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=eclipse-oomph/oomph&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray]
 
-https://github.com/bndtools/bnd/[bndtools/bnd]
+link:https://github.com/bndtools/bnd/[bndtools/bnd]
 
-https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/BndConfiguration.setup&show=true[image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=bnd/bndtools&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[Create
-Eclipse Dev Env for bnd/bndtools]]
+link:https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/BndConfiguration.setup&show=true[image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=bnd/bndtools&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray]
 
-eclipse+installer:https://cdn.klib.io/oomph/setups-github/BndConfiguration.setup[image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=bnd/bndtools&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[Launch
-Eclipse Dev Env for bnd/bndtools]]
+link:eclipse+installer:https://cdn.klib.io/oomph/setups-github/BndConfiguration.setup[image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=bnd/bndtools&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray]
 
-https://github.com/klibio/cdn/[klibi/cdn]
+link:https://github.com/klibio/cdn/[klibi/cdn]
 
-https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/CdnConfiguration.setup&show=true[image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=klibio/cdn&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[Create
-Eclipse Dev Env for klibio/cdn]]
+link:https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/CdnConfiguration.setup&show=true[image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=klibio/cdn&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray]
 
-eclipse+installer:https://cdn.klib.io/oomph/setups-github/CdnConfiguration.setup[image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=klibio/cdn&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[Launch
-Eclipse Dev Env for klibio/cdn]]
+link:eclipse+installer:https://cdn.klib.io/oomph/setups-github/CdnConfiguration.setup[image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=klibio/cdn&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray]
