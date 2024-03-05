@@ -1,14 +1,12 @@
 = klib.io - oomph setups
 :lang: en
+:favicon:
 
 == oomph/EclipseInstaller setups
 
 === Project - oomph/EclipseInstaller
 
-github
-
-eclipse oomph setup
-
+IMPORTANT: pre-requisite Eclipse oomph-installer
 requires oomph app and registerd protocal handler
 
 link:https://github.com/eclipse-oomph/oomph[github: eclipse-oomph/oomph]

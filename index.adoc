@@ -14,5 +14,5 @@ link:oomph/index.html[oomph/EclipseInstaller configurations]
 
 == Sizer
 
-* https://www.brianapps.net/sizer4/[Sizer 4.0 by ]
-* link:sizer/[Sizer] / link:sizer/SizerExport.xml[sizer config file]
+* https://www.brianapps.net/sizer4/[Sizer 4.0 - official site, window=_blank]
+* link:sizer/sizer.html/[Sizer] / link:sizer/SizerExport.xml[sizer config file]
