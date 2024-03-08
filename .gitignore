@@ -27,6 +27,7 @@ download/
 target/
 wrk/
 .DS_Store
+.jekyll-cache/
 oomph/setups/
 Gemfile.lock
 _site/
