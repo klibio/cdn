@@ -8,7 +8,7 @@
     name="empty-bndtools"
     label="empty-bndtools-latest">
   <stream name="7.0.0"
-      label="7_0_0">
+      label="7.0.0">
     <setupTask
         xsi:type="setup:CompoundTask"
         name="bndtools">
