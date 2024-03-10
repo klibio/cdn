@@ -34,3 +34,4 @@ requires oomph app and registerd protocal handler
 
 |===
 
+link:/oomph/setups-github/klibio/klibIo-product-catalog.setup[klib.io Product catalog]
