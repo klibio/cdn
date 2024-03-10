@@ -15,7 +15,7 @@
       name="bnd.workspace"
       label="bnd Workspace">
     <stream
-        href="misc/EmptyBndtoolsLatest.setup#//@streams[name='main']"/>
+        href="misc/EmptyBndtoolsLatest.setup#//@streams[name='7.0.0']"/>
     <description>The bnd workspace provides cool stuff.</description>
   </workspace>
   <description>The bnd configuration provides cool stuff.</description>
