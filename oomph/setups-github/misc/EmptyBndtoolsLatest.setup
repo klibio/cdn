@@ -5,10 +5,38 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
-    name="empty-bndtools-latest"
+    name="empty-bndtools"
     label="empty-bndtools-latest">
-  <stream name="main"
-      label="Main">
+  <stream name="7.0.0"
+      label="7.0.0">
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="bndtools">
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="bndtools">
+        <requirement
+            name="bndtools.main.feature.feature.group"/>
+        <requirement
+            name="bndtools.m2e.feature.feature.group"/>
+        <requirement
+            name="bndtools.pde.feature.feature.group"/>
+        <repository
+            url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="eclipse.ini">
+        <setupTask
+            xsi:type="setup:EclipseIniTask"
+            excludedTriggers="STARTUP"
+            option="-perspective"
+            value="bndtools.perspective"/>
+      </setupTask>
+    </setupTask>
+  </stream>
+  <stream name="6.4.1"
+      label="6.4.1">
     <setupTask
         xsi:type="setup:CompoundTask"
         name="bndtools">

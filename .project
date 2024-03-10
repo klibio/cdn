@@ -10,12 +10,12 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1695380383643</id>
+			<id>1710079847196</id>
 			<name></name>
-			<type>9</type>
+			<type>26</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-true-(docs|oomph|oomph-console)</arguments>
+				<arguments>1.0-name-matches-false-true-(setups-github)</arguments>
 			</matcher>
 		</filter>
 	</filteredResources>
