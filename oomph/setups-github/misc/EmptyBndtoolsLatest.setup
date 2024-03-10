@@ -5,8 +5,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
-    name="empty-bndtools"
-    label="empty-bndtools-latest">
+    name="bndtools-wrkspc"
+    label="bndtools-wrkspc">
   <stream name="7.0.0"
       label="7.0.0">
     <setupTask
