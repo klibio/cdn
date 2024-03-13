@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Project
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    name="bnd-ecf-wrkspc"
+    label="bnd-ecf-wrkspc">
+  <stream name="7.0.0"
+      label="7.0.0">
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="bndtools">
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="bndtools">
+        <requirement
+            name="bndtools.main.feature.feature.group"/>
+        <requirement
+            name="bndtools.m2e.feature.feature.group"/>
+        <requirement
+            name="bndtools.pde.feature.feature.group"/>
+        <repository
+            url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="eclipse.ini">
+        <setupTask
+            xsi:type="setup:EclipseIniTask"
+            excludedTriggers="STARTUP"
+            option="-perspective"
+            value="bndtools.perspective"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="org.bndtools.templating.gitrepo">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.bndtools.templating.gitrepo/githubRepos"
+            value="bndtools/workspace;branch=&quot;origin/7.0&quot;,bndtools/bndtools.workspace.min,ECF/bndtools.workspace"/>
+      </setupTask>
+    </setupTask>
+  </stream>
+  <stream name="6.4.1"
+      label="6.4.1">
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="bndtools">
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="bndtools">
+        <requirement
+            name="bndtools.main.feature.feature.group"/>
+        <requirement
+            name="bndtools.m2e.feature.feature.group"/>
+        <requirement
+            name="bndtools.pde.feature.feature.group"/>
+        <repository
+            url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="eclipse.ini">
+        <setupTask
+            xsi:type="setup:EclipseIniTask"
+            excludedTriggers="STARTUP"
+            option="-perspective"
+            value="bndtools.perspective"/>
+      </setupTask>
+    </setupTask>
+  </stream>
+  <logicalProjectContainer
+      xsi:type="setup:ProjectCatalog"
+      href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
+  <description>
+    empty eclipse workspace with 
+    latest bndtools release and ecf
+  </description>
+</setup:Project>
