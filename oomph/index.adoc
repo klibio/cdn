@@ -17,10 +17,10 @@ requires oomph app and registerd protocal handler
 
 3+| bla
 
-|empty bndtools workpace
+|empty bndtools workspace
 |image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=empty%20bnd%20wrkspc&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link="eclipse+installer:https://cdn.klib.io/oomph/setups-github/BndConfigurationEmpty.setup",alt:"Launch empty bnd workspace",window=_blank]|image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=empty%20bnd%20wrkspc&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/BndConfigurationEmpty.setup&show=true,alt:"Create empty bnd wrkspc",window=_blank]
 
-|empty ecf workpace
+|empty ecf workspace
 |image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=empty%20ecf%20wrkspc&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link="eclipse+installer:https://cdn.klib.io/oomph/setups-github/BndConfigurationECF.setup",alt:"Launch empty bnd workspace",window=_blank]|image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=empty%20ecf%20wrkspc&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/BndConfigurationECF.setup&show=true,alt:"Create empty ecf wrkspc",window=_blank]
 
 |link:https://github.com/bndtools/bnd/[bndtools/bnd,window=_blank]
