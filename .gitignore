@@ -26,6 +26,7 @@ replay_pid*
 download/
 target/
 oomph-console/setups/
+oomph-console/wrk/
 .DS_Store
 .jekyll-cache/
 oomph/setups/

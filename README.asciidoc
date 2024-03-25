@@ -21,7 +21,7 @@ Authoring,window=_blank]
 
 ==== oomph add-ons
 
-* https://github.com/a-langer/eclipse-oomph-console[Github - Console
+* https://download.eclipse.org/oomph/products/[Github - Console
 Oomph Installer]
 
 ==== misc

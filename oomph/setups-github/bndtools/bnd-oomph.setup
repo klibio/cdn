@@ -130,7 +130,11 @@
         <requirement
             name="bndtools.pde.feature.feature.group"/>
         <repository
+<<<<<<< HEAD
             url="https://bndtools.org/bndtools.p2.repo/7.1.0/"/>
+=======
+            url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
+>>>>>>> bd14f2a (adding ecf configs, fixing version refs)
       </setupTask>
       <setupTask
           xsi:type="setup.p2:P2Task"
