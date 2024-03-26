@@ -59,6 +59,8 @@
           label="ECF Core Features"
           licenseConfirmationDisabled="true">
         <requirement
+            name="com.sun.jna"/>
+        <requirement
             name="org.apache.httpcomponents.httpclient"/>
         <requirement
             name="org.apache.httpcomponents.httpcore"/>
@@ -242,6 +244,8 @@
           label="ECF Core Features"
           licenseConfirmationDisabled="true">
         <requirement
+            name="com.sun.jna"/>
+        <requirement
             name="org.apache.httpcomponents.httpclient"/>
         <requirement
             name="org.apache.httpcomponents.httpcore"/>
@@ -424,6 +428,8 @@
           xsi:type="setup.p2:P2Task"
           label="ECF Core Features"
           licenseConfirmationDisabled="true">
+        <requirement
+            name="com.sun.jna"/>
         <requirement
             name="org.apache.httpcomponents.httpclient"/>
         <requirement
