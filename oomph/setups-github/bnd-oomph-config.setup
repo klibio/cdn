@@ -5,17 +5,17 @@
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     label="bnd">
   <installation
-      name="cdn.installation"
-      label="cdn Installation">
+      name="bndtools.installation"
+      label="bndtools Installation">
     <productVersion
-        href="index:/org.eclipse.setup#//@productCatalogs[name='org.eclipse.products']/@products[name='epp.package.modeling']/@versions[name='2024-03']"/>
+        href="index:/org.eclipse.setup#//@productCatalogs[name='org.eclipse.products']/@products[name='epp.package.java']/@versions[name='latest.released']"/>
     <description>The bnd installation provides cool stuff.</description>
   </installation>
   <workspace
-      name="cdn.workspace"
-      label="cdn Workspace">
+      name="bndtools.workspace"
+      label="bndtools Workspace">
     <stream
-        href="https://cdn.klib.io/oomph/setups-github/cdn/cdn.setup#//@streams[name='main']"/>
+        href="https://raw.githubusercontent.com/klibio/bndtools/fff0bd4f616806f28ecd208933cf31c4ccf6895f/bnd-oomph-project.setup#//@streams[name='master']"/>
     <description>The bnd workspace provides cool stuff.</description>
   </workspace>
   <description>The bnd configuration provides cool stuff.</description>

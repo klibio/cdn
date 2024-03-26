@@ -7,6 +7,50 @@
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     name="bnd-ecf-wrkspc"
     label="bnd-ecf-wrkspc">
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      name="eclipse.ini">
+    <setupTask
+        xsi:type="setup:EclipseIniTask"
+        excludedTriggers="STARTUP"
+        option="-perspective"
+        value="bndtools.perspective"/>
+  </setupTask>
+  <stream name="latest-build-snapshot"
+      label="latest-build-snapshot">
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="bndtools">
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="bndtools">
+        <requirement
+            name="bndtools.main.feature.feature.group"/>
+        <requirement
+            name="bndtools.m2e.feature.feature.group"/>
+        <requirement
+            name="bndtools.pde.feature.feature.group"/>
+        <repository
+            url="https://bndtools.jfrog.io/bndtools/update-snapshot"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="org.bndtools.templating.gitrepo">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.bndtools.templating.gitrepo/githubRepos"
+            value="bndtools/workspace;branch=&quot;origin/7.0&quot;,bndtools/bndtools.workspace.min,ECF/bndtools.workspace"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ecf">
+        <requirement
+            name="org.eclipse.ecf.remoteservices.tooling.bndtools.feature.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+    </setupTask>
+  </stream>
   <stream name="7.0.0"
       label="7.0.0">
     <setupTask
@@ -26,20 +70,29 @@
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
-          name="eclipse.ini">
-        <setupTask
-            xsi:type="setup:EclipseIniTask"
-            excludedTriggers="STARTUP"
-            option="-perspective"
-            value="bndtools.perspective"/>
-      </setupTask>
-      <setupTask
-          xsi:type="setup:CompoundTask"
           name="org.bndtools.templating.gitrepo">
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.bndtools.templating.gitrepo/githubRepos"
             value="bndtools/workspace;branch=&quot;origin/7.0&quot;,bndtools/bndtools.workspace.min,ECF/bndtools.workspace"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ecf">
+        <requirement
+            name="v20240114-0141.bndtools"/>
+        <requirement
+            name="v20240114-0141.core"/>
+        <requirement
+            name="v20240114-0141.core sources"/>
+        <requirement
+            name="v20240114-0141.remoteservices"/>
+        <requirement
+            name="v20240114-0141.sdk"/>
+        <requirement
+            name="v20240114-0141.other"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
       </setupTask>
     </setupTask>
   </stream>
@@ -58,16 +111,15 @@
         <requirement
             name="bndtools.pde.feature.feature.group"/>
         <repository
-            url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
+            url="https://cdn.klib.io/org.bndtools.p2/6.4.1/"/>
       </setupTask>
       <setupTask
-          xsi:type="setup:CompoundTask"
-          name="eclipse.ini">
-        <setupTask
-            xsi:type="setup:EclipseIniTask"
-            excludedTriggers="STARTUP"
-            option="-perspective"
-            value="bndtools.perspective"/>
+          xsi:type="setup.p2:P2Task"
+          label="ecf">
+        <requirement
+            name="org.eclipse.ecf.remoteservices.tooling.bndtools.feature.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
       </setupTask>
     </setupTask>
   </stream>
