@@ -59,7 +59,8 @@
           label="ECF Core Features"
           licenseConfirmationDisabled="true">
         <requirement
-            name="com.sun.jna"/>
+            name="com.sun.jna"
+            versionRange="[4.4.0,5.0.0)"/>
         <requirement
             name="org.apache.httpcomponents.httpclient"/>
         <requirement
@@ -84,8 +85,6 @@
             name="org.eclipse.ecf.filetransfer.httpclientjava.feature.feature.group"/>
         <repository
             url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
-        <repository
-            url="https://download.eclipse.org/releases/2024-03/202403131000"/>
       </setupTask>
       <setupTask
           xsi:type="setup.p2:P2Task"
@@ -244,7 +243,8 @@
           label="ECF Core Features"
           licenseConfirmationDisabled="true">
         <requirement
-            name="com.sun.jna"/>
+            name="com.sun.jna"
+            versionRange="[4.4.0,5.0.0)"/>
         <requirement
             name="org.apache.httpcomponents.httpclient"/>
         <requirement
@@ -269,8 +269,6 @@
             name="org.eclipse.ecf.filetransfer.httpclientjava.feature.feature.group"/>
         <repository
             url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
-        <repository
-            url="https://download.eclipse.org/releases/2024-03/202403131000"/>
       </setupTask>
       <setupTask
           xsi:type="setup.p2:P2Task"
@@ -429,7 +427,8 @@
           label="ECF Core Features"
           licenseConfirmationDisabled="true">
         <requirement
-            name="com.sun.jna"/>
+            name="com.sun.jna"
+            versionRange="[4.4.0,5.0.0)"/>
         <requirement
             name="org.apache.httpcomponents.httpclient"/>
         <requirement
@@ -454,8 +453,6 @@
             name="org.eclipse.ecf.filetransfer.httpclientjava.feature.feature.group"/>
         <repository
             url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
-        <repository
-            url="https://download.eclipse.org/releases/2024-03/202403131000"/>
       </setupTask>
       <setupTask
           xsi:type="setup.p2:P2Task"
