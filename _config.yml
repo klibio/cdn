@@ -17,3 +17,5 @@ asciidoctor:
     idseparator: _
     stylesdir: css
     source-highlighter: coderay
+plugins:
+  - "jekyll-github-metadata"
