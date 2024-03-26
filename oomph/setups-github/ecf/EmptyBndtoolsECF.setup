@@ -34,20 +34,30 @@
             url="https://bndtools.jfrog.io/bndtools/update-snapshot"/>
       </setupTask>
       <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ecf">
+        <requirement
+            name="v20240114-0141.bndtools"/>
+        <requirement
+            name="v20240114-0141.core"/>
+        <requirement
+            name="v20240114-0141.core sources"/>
+        <requirement
+            name="v20240114-0141.remoteservices"/>
+        <requirement
+            name="v20240114-0141.sdk"/>
+        <requirement
+            name="v20240114-0141.other"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
           xsi:type="setup:CompoundTask"
           name="org.bndtools.templating.gitrepo">
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.bndtools.templating.gitrepo/githubRepos"
             value="bndtools/workspace;branch=&quot;origin/7.0&quot;,bndtools/bndtools.workspace.min,ECF/bndtools.workspace"/>
-      </setupTask>
-      <setupTask
-          xsi:type="setup.p2:P2Task"
-          label="ecf">
-        <requirement
-            name="org.eclipse.ecf.remoteservices.tooling.bndtools.feature.feature.group"/>
-        <repository
-            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
       </setupTask>
     </setupTask>
   </stream>
@@ -69,14 +79,6 @@
             url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
       </setupTask>
       <setupTask
-          xsi:type="setup:CompoundTask"
-          name="org.bndtools.templating.gitrepo">
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.bndtools.templating.gitrepo/githubRepos"
-            value="bndtools/workspace;branch=&quot;origin/7.0&quot;,bndtools/bndtools.workspace.min,ECF/bndtools.workspace"/>
-      </setupTask>
-      <setupTask
           xsi:type="setup.p2:P2Task"
           label="ecf">
         <requirement
@@ -93,6 +95,14 @@
             name="v20240114-0141.other"/>
         <repository
             url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="org.bndtools.templating.gitrepo">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.bndtools.templating.gitrepo/githubRepos"
+            value="bndtools/workspace;branch=&quot;origin/7.0&quot;,bndtools/bndtools.workspace.min,ECF/bndtools.workspace"/>
       </setupTask>
     </setupTask>
   </stream>
