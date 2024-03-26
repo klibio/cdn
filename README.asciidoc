@@ -2,6 +2,8 @@
 
 This repo contains p2 repos and oomph setups for provisioning purposes.
 
+[![pages-build-deployment](https://github.com/klibio/cdn/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/klibio/cdn/actions/workflows/pages/pages-build-deployment)
+
 == oomph-usage
 
 experiments on oomph / eclipse-installer usages
