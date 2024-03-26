@@ -2,7 +2,6 @@ title: cdn.klib.io
 # uncomment baseurl if you want to publish the site to a subfolder
 #baseurl: /blog
 description: oomph eclipse installer setups and p2 repositories 
-repository: klibio/cdn
 exclude:
 - LICENSE
 - README.adoc
