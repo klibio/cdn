@@ -9,3 +9,5 @@ group :jekyll_plugins do
 end
 
 gem "webrick", "~> 1.8"
+# added for git metadata access
+gem "jekyll-github-metadata"
