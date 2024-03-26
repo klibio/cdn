@@ -33,24 +33,10 @@
         <repository
             url="https://bndtools.jfrog.io/bndtools/update-snapshot"/>
       </setupTask>
-      <setupTask
-          xsi:type="setup.p2:P2Task"
-          label="ecf">
-        <requirement
-            name="v20240114-0141.bndtools"/>
-        <requirement
-            name="v20240114-0141.core"/>
-        <requirement
-            name="v20240114-0141.core sources"/>
-        <requirement
-            name="v20240114-0141.remoteservices"/>
-        <requirement
-            name="v20240114-0141.sdk"/>
-        <requirement
-            name="v20240114-0141.other"/>
-        <repository
-            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
-      </setupTask>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="ECF">
       <setupTask
           xsi:type="setup:CompoundTask"
           name="org.bndtools.templating.gitrepo">
@@ -58,6 +44,156 @@
             xsi:type="setup:PreferenceTask"
             key="/instance/org.bndtools.templating.gitrepo/githubRepos"
             value="bndtools/workspace;branch=&quot;origin/7.0&quot;,bndtools/bndtools.workspace.min,ECF/bndtools.workspace"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF Bndtools Support"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.eclipse.ecf.remoteservices.tooling.bndtools.feature.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF Core Features"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.apache.httpcomponents.httpclient"/>
+        <requirement
+            name="org.apache.httpcomponents.httpcore"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient45.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient5.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.ssl.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.ssl.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclientjava.feature.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF Core Source Features"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient45.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient5.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient4.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.ssl.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.ssl.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclientjava.feature.source.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF Remote Services SDK"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.eclipse.ecf.remoteservice.sdk.examples.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.sdk.examples.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.sdk.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.sdk.feature.source.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF SDK for Eclipse"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.apache.hadoop.zookeeper"/>
+        <requirement
+            name="org.xbill.dns"/>
+        <requirement
+            name="org.eclipse.ecf.core.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.source.feature.group"/>
+        <requirement
+            name="org.jdom"/>
+        <requirement
+            name="org.json"/>
+        <requirement
+            name="org.objectweb.asm"/>
+        <requirement
+            name="org.apache.log4j"/>
+        <requirement
+            name="com.sun.syndication"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="Other ECF Features"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.eclipse.ecf.console.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.console.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.datashare.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.datashare.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.dnssd.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.dnssd.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.slp.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.slp.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.zookeeper.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.zookeeper.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.docshare.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.docshare.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.provider.generic.datashare.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.provider.generic.datashare.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.presence.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.presence.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.rest.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.rest.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.xmpp.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.xmpp.feature.source.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
       </setupTask>
     </setupTask>
   </stream>
@@ -78,24 +214,10 @@
         <repository
             url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
       </setupTask>
-      <setupTask
-          xsi:type="setup.p2:P2Task"
-          label="ecf">
-        <requirement
-            name="v20240114-0141.bndtools"/>
-        <requirement
-            name="v20240114-0141.core"/>
-        <requirement
-            name="v20240114-0141.core sources"/>
-        <requirement
-            name="v20240114-0141.remoteservices"/>
-        <requirement
-            name="v20240114-0141.sdk"/>
-        <requirement
-            name="v20240114-0141.other"/>
-        <repository
-            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
-      </setupTask>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="ECF">
       <setupTask
           xsi:type="setup:CompoundTask"
           name="org.bndtools.templating.gitrepo">
@@ -103,6 +225,156 @@
             xsi:type="setup:PreferenceTask"
             key="/instance/org.bndtools.templating.gitrepo/githubRepos"
             value="bndtools/workspace;branch=&quot;origin/7.0&quot;,bndtools/bndtools.workspace.min,ECF/bndtools.workspace"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF Bndtools Support"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.eclipse.ecf.remoteservices.tooling.bndtools.feature.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF Core Features"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.apache.httpcomponents.httpclient"/>
+        <requirement
+            name="org.apache.httpcomponents.httpcore"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient45.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient5.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.ssl.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.ssl.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclientjava.feature.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF Core Source Features"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient45.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient5.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient4.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.ssl.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.ssl.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclientjava.feature.source.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF Remote Services SDK"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.eclipse.ecf.remoteservice.sdk.examples.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.sdk.examples.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.sdk.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.sdk.feature.source.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF SDK for Eclipse"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.apache.hadoop.zookeeper"/>
+        <requirement
+            name="org.xbill.dns"/>
+        <requirement
+            name="org.eclipse.ecf.core.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.source.feature.group"/>
+        <requirement
+            name="org.jdom"/>
+        <requirement
+            name="org.json"/>
+        <requirement
+            name="org.objectweb.asm"/>
+        <requirement
+            name="org.apache.log4j"/>
+        <requirement
+            name="com.sun.syndication"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="Other ECF Features"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.eclipse.ecf.console.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.console.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.datashare.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.datashare.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.dnssd.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.dnssd.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.slp.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.slp.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.zookeeper.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.zookeeper.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.docshare.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.docshare.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.provider.generic.datashare.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.provider.generic.datashare.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.presence.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.presence.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.rest.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.rest.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.xmpp.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.xmpp.feature.source.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
       </setupTask>
     </setupTask>
   </stream>
@@ -123,11 +395,165 @@
         <repository
             url="https://cdn.klib.io/org.bndtools.p2/6.4.1/"/>
       </setupTask>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="ECF">
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="org.bndtools.templating.gitrepo">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.bndtools.templating.gitrepo/githubRepos"
+            value="bndtools/workspace;branch=&quot;origin/7.0&quot;,bndtools/bndtools.workspace.min,ECF/bndtools.workspace"/>
+      </setupTask>
       <setupTask
           xsi:type="setup.p2:P2Task"
-          label="ecf">
+          label="ECF Bndtools Support"
+          licenseConfirmationDisabled="true">
         <requirement
             name="org.eclipse.ecf.remoteservices.tooling.bndtools.feature.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF Core Features"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.apache.httpcomponents.httpclient"/>
+        <requirement
+            name="org.apache.httpcomponents.httpcore"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient45.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient5.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.ssl.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.ssl.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclientjava.feature.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF Core Source Features"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient45.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient5.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient4.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.ssl.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.ssl.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.filetransfer.httpclientjava.feature.source.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF Remote Services SDK"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.eclipse.ecf.remoteservice.sdk.examples.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.sdk.examples.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.sdk.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.sdk.feature.source.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="ECF SDK for Eclipse"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.apache.hadoop.zookeeper"/>
+        <requirement
+            name="org.xbill.dns"/>
+        <requirement
+            name="org.eclipse.ecf.core.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.core.source.feature.group"/>
+        <requirement
+            name="org.jdom"/>
+        <requirement
+            name="org.json"/>
+        <requirement
+            name="org.objectweb.asm"/>
+        <requirement
+            name="org.apache.log4j"/>
+        <requirement
+            name="com.sun.syndication"/>
+        <repository
+            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="Other ECF Features"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="org.eclipse.ecf.console.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.console.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.datashare.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.datashare.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.dnssd.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.dnssd.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.slp.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.slp.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.zookeeper.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.discovery.zookeeper.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.docshare.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.docshare.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.provider.generic.datashare.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.provider.generic.datashare.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.presence.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.presence.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.rest.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.remoteservice.rest.feature.source.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.xmpp.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.ecf.xmpp.feature.source.feature.group"/>
         <repository
             url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
       </setupTask>
