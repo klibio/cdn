@@ -37,7 +37,7 @@ requires oomph app and registerd protocal handler
 |image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=klibio/cdn&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link=eclipse+installer:https://cdn.klib.io/oomph/setups-github/CdnConfiguration.setup,alt:Launch Eclipse Dev Env for klibio/cdn,window=_blank]
 |image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=klibio/cdn&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/CdnConfiguration.setup&show=true,alt:Create Eclipse Dev Env for klibio/cdn,window=_blank]
 
-|empty klib.io workspace]
+|empty klib.io workspace
 |image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=empty klibio wrkspc&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link=eclipse+installer:https://cdn.klib.io/oomph/setups-github/klibio/klibio-configuration-empty.setup,alt:Launch empty klibio wrkspc,window=_blank]
 |image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=empty klibio wrkspc&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/klibio/klibio-configuration-empty.setup&show=true,alt:Create empty klib.io wrkspc,window=_blank]
 
