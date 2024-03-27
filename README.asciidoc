@@ -2,7 +2,7 @@
 
 This repo contains p2 repos and oomph setups for provisioning purposes.
 
-image:https://github.com/klibio/cdn/actions/workflows/pages/pages-build-deployment/badge.svg[link="https://github.com/klibio/cdn/actions/workflows/pages/pages-build-deployment",alt="pages-build-deployment",window=_blank]
+image:https://github.com/klibio/cdn/actions/workflows/publish.yml/badge.svg[link="https://github.com/klibio/cdn/actions/workflows/publish.yml",alt="Publish to GitHub Pages",window=_blank]
 
 == oomph-usage
 
