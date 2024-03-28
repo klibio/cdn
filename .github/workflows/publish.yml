@@ -1,5 +1,6 @@
 # see https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml for reference
-name: testing oomph setups/installations and publish to GitHub Pages
+name: validate & deploy to cdn.klib.io
+
 on:
   push:
     branches: [main, master]
