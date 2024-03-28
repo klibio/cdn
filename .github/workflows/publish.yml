@@ -29,6 +29,7 @@ jobs:
         maven-version: 3.9.6
     - name: run test installations
       run: oomph-console/setup-oomph-console.sh
+    # update github pages
     - name: Configure Pages
       id: pages
       uses: actions/configure-pages@v3

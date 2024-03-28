@@ -32,12 +32,12 @@ mvn org.apache.maven.plugins:maven-dependency-plugin:3.3.0:unpack \
 
 #config_oomph=https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/configurations/OomphConfiguration.setup
 declare -a configs=(
-  "https://cdn.klib.io/oomph/setups-github/BndConfiguration.setup"
-  "https://cdn.klib.io/oomph/setups-github/BndConfigurationEmpty.setup"
-  "https://cdn.klib.io/oomph/setups-github/BndConfigurationECF.setup"
-  "https://cdn.klib.io/oomph/setups-github/CdnConfiguration.setup"
-  "https://cdn.klib.io/oomph/setups-github/klibio/klibio-configuration-empty.setup"
-  "https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/configurations/OomphConfiguration.setup"
+    "https://cdn.klib.io/oomph/setups-github/BndConfiguration.setup"
+    "https://cdn.klib.io/oomph/setups-github/BndConfigurationEmpty.setup"
+    "https://cdn.klib.io/oomph/setups-github/BndConfigurationECF.setup"
+    "https://cdn.klib.io/oomph/setups-github/CdnConfiguration.setup"
+    "https://cdn.klib.io/oomph/setups-github/klibio/klibio-configuration-empty.setup"
+    "https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/configurations/OomphConfiguration.setup"
 )
 
 for cfg in "${configs[@]}"
@@ -64,8 +64,17 @@ do
     if [ $retVal -ne 0 ]; then
         paderr "error occured during installation"
     fi
-    
+
     padout "installation is available inside $project_dir/eclipse"
+
+    headline "logfiles  of $project_setup"
+    find "${install_dir}/eclipse-installer" -type f -name "*.log" -print0 | while IFS= read -r -d '' file; do
+        echo "output logfile: $file"
+        echo "========================================"
+        cat "$file"
+        echo "========================================"
+        echo
+    done
     
     headline "validation of $project_setup - started"
     
@@ -73,7 +82,7 @@ do
     [[ -f $project_dir/eclipse/eclipse.ini ]]  && succ || err
     padout "workspace"
     [[ -d $project_dir/ws/.metadata ]]  && succ || err
-
+    
     headline "validation of $project_setup - finished"
 done
 
