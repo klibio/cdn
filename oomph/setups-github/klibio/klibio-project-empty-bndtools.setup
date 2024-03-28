@@ -52,7 +52,7 @@
         <requirement
             name="v20240114-0141.bndtools"/>
         <repository
-            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+            url="https://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
@@ -97,7 +97,7 @@
       <requirement
           name="v20240114-0141.bndtools"/>
       <repository
-          url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+          url="https://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -144,7 +144,7 @@
         <requirement
             name="v20240114-0141.bndtools"/>
         <repository
-            url="http://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
+            url="https://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"

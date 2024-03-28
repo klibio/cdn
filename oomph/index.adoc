@@ -9,43 +9,41 @@
 IMPORTANT: pre-requisite Eclipse oomph-installer
 requires oomph app and registerd protocal handler
 
-[cols="2,4,4",options=header,frame=all, grid=all]
+[cols="3,6,6",options=header,frame=all, grid=all]
 |===
 | github
 | oomph launch - URI handler available
 | no EclipseInstaller available
 
-3+| **empty workspaces**
-
-|empty bndtools workspace
-|image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=empty%20bnd%20wrkspc&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link="eclipse+installer:https://cdn.klib.io/oomph/setups-github/BndConfigurationEmpty.setup",alt:"Launch empty bnd workspace",window=_blank]
-|image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=empty%20bnd%20wrkspc&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/BndConfigurationEmpty.setup&show=true,alt:"Create empty bnd wrkspc",window=_blank]
-
-|empty ecf workspace
-|image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=empty%20ecf%20wrkspc&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link="eclipse+installer:https://cdn.klib.io/oomph/setups-github/BndConfigurationECF.setup",alt:"Launch empty bnd workspace",window=_blank]
-|image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=empty%20ecf%20wrkspc&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/BndConfigurationECF.setup&show=true,alt:"Create empty ecf wrkspc",window=_blank]
-
 3+| **bndtools**
 
 |link:https://github.com/bndtools/bnd/[bndtools/bnd,window=_blank]
-|image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=bnd/bndtools&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link="eclipse+installer:https://cdn.klib.io/oomph/setups-github/BndConfiguration.setup",alt:"Launch Eclipse Dev Env for bnd/bndtools",window=_blank]
-|image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=bnd/bndtools&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/BndConfiguration.setup&show=true,alt:"Create Eclipse Dev Env for bnd/bndtools",window=_blank]
+|image:https://img.shields.io/static/v1?logo=eclipseide&label=contribute%20to&message=bnd/bndtools&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link="eclipse+installer:https://cdn.klib.io/oomph/setups-github/BndConfiguration.setup",alt:"Launch Eclipse Dev Env for bnd/bndtools",window=_blank]
+|image:https://img.shields.io/static/v1?logo=eclipseide&label=contribute%20to&message=bnd/bndtools&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/BndConfiguration.setup&show=true,alt:"Create Eclipse Dev Env for bnd/bndtools",window=_blank]
+
+|empty bndtools workspace
+|image:https://img.shields.io/static/v1?logo=eclipseide&label=create%20wrkspc&message=bnd&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link="eclipse+installer:https://cdn.klib.io/oomph/setups-github/BndConfigurationEmpty.setup",alt:"Launch empty bnd workspace",window=_blank]
+|image:https://img.shields.io/static/v1?logo=eclipseide&label=create%20wrkspc&message=bnd&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/BndConfigurationEmpty.setup&show=true,alt:"Create empty bnd wrkspc",window=_blank]
+
+|empty ecf workspace
+|image:https://img.shields.io/static/v1?logo=eclipseide&label=create%20wrkspc&message=ecf&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link="eclipse+installer:https://cdn.klib.io/oomph/setups-github/BndConfigurationECF.setup",alt:"Launch empty bnd workspace",window=_blank]
+|image:https://img.shields.io/static/v1?logo=eclipseide&label=create%20wrkspc&message=ecf&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/BndConfigurationECF.setup&show=true,alt:"Create empty ecf wrkspc",window=_blank]
 
 3+| **klib.io**
 
 |link:https://github.com/klibio/cdn/[klibio/cdn,window=_blank]
-|image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=klibio/cdn&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link=eclipse+installer:https://cdn.klib.io/oomph/setups-github/CdnConfiguration.setup,alt:Launch Eclipse Dev Env for klibio/cdn,window=_blank]
-|image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=klibio/cdn&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/CdnConfiguration.setup&show=true,alt:Create Eclipse Dev Env for klibio/cdn,window=_blank]
+|image:https://img.shields.io/static/v1?logo=eclipseide&label=contribute%20to&message=klibio/cdn&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link=eclipse+installer:https://cdn.klib.io/oomph/setups-github/CdnConfiguration.setup,alt:Launch Eclipse Dev Env for klibio/cdn,window=_blank]
+|image:https://img.shields.io/static/v1?logo=eclipseide&label=contribute%20to&message=klibio/cdn&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/CdnConfiguration.setup&show=true,alt="contribute to klibio/cdn",window=_blank]
 
-|empty klib.io workspace
-|image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=empty klibio wrkspc&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link=eclipse+installer:https://cdn.klib.io/oomph/setups-github/klibio/klibio-configuration-empty.setup,alt:Launch empty klibio wrkspc,window=_blank]
-|image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=empty klibio wrkspc&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/klibio/klibio-configuration-empty.setup&show=true,alt:Create empty klib.io wrkspc,window=_blank]
+|empty workspace
+|image:https://img.shields.io/static/v1?logo=eclipseide&label=create%20wrkspc&message=klibio&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link=eclipse+installer:https://cdn.klib.io/oomph/setups-github/klibio/klibio-configuration-empty.setup,alt:Launch empty klibio wrkspc,window=_blank]
+|image:https://img.shields.io/static/v1?logo=eclipseide&label=create%20wrkspc&message=klibio&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://cdn.klib.io/oomph/setups-github/klibio/klibio-configuration-empty.setup&show=true,alt="create empty klib.io wrkspc",window=_blank]
 
 3+| **oomph / eclipse-installer**
 
 |link:https://github.com/eclipse-oomph/oomph[eclipse-oomph/oomph,window=_blank]
-|image:https://img.shields.io/static/v1?logo=eclipseide&label=Launch%20Dev%20Env&message=eclipse-oomph/oomph&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link="eclipse+installer:https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/configurations/OomphConfiguration.setup",alt="Launch Eclipse Dev Env for eclipse-oomph/oomph",window=_blank]
-|image:https://img.shields.io/static/v1?logo=eclipseide&label=Create%20Dev%20Env&message=eclipse-oomph/oomph&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/configurations/OomphConfiguration.setup&show=true,window=_blank]
+|image:https://img.shields.io/static/v1?logo=eclipseide&label=contribute%20to&message=eclipse-oomph/oomph&style=for-the-badge&logoColor=white&labelColor=darkorange&color=gray[link="eclipse+installer:https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/configurations/OomphConfiguration.setup",alt="contribute to oomph",window=_blank]
+|image:https://img.shields.io/static/v1?logo=eclipseide&label=contribute%20to&message=eclipse-oomph/oomph&style=for-the-badge&logoColor=white&labelColor=darkred&color=gray[link=https://www.eclipse.org/setups/installer/?url=https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/configurations/OomphConfiguration.setup&show=true,alt="contribute to oomph",window=_blank]
 
 |===
 

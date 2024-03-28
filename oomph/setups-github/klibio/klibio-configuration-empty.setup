@@ -15,7 +15,7 @@
       name="empty.klibio.workspace"
       label="empty-klibio Workspace">
     <stream
-        href="klibio-project-empty.setup#//@streams[name='7.0.0']"/>
+        href="../parking.setup#//@streams[name='7.0.0']"/>
     <description>The empty-klibio workspace provides cool stuff.</description>
   </workspace>
   <description>The empty-klibio configuration provides cool stuff.</description>
