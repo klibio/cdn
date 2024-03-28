@@ -50,7 +50,7 @@ do
     oomph_product=epp.package.committers
     oomph_project=oomph
     mkdir -p $wrk_dir >>/dev/null 2>&1
-    ${install_dir}/eclipse-inst -nosplash -application org.eclipse.oomph.console.application \
+    ${install_dir}/eclipse-installer/eclipse-inst -nosplash -application org.eclipse.oomph.console.application \
     -vmargs \
     -Doomph.configuration.setups="$cfg" \
     -D_oomph.product.id=$oomph_product \
