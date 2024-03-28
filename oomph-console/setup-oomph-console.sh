@@ -17,7 +17,7 @@ version=1.0.4
 
 # one of [win32.win32.x86_64|linux.gtk.x86_64]
 #sys_props=win32.win32.x86_64
-sysp_rops=linux.gtk.x86_64
+sys_props=linux.gtk.x86_64
 archive_type=tar.gz
 
 install_dir=${script_dir}/target/oomph.console
