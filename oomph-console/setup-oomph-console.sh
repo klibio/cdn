@@ -43,22 +43,26 @@ declare -a configs=(
 for cfg in "${configs[@]}"
 do
     project_setup=$(echo $cfg | sed 's/.*\/\(.*\)\.setup/\1/g')
-    echo -e "#\n# execute eclipse-installer\n#\n"
-    echo "be patient for installation of ... $project_setup"
+    headline "execute eclipse-installer for $project_setup"
+    echo "be patient for installation, cause it will take a while"
     # see documentation at https://github.com/a-langer/eclipse-oomph-console
     project_dir=$wrk_dir/$project_setup
     oomph_product=epp.package.committers
     oomph_project=oomph
     mkdir -p $wrk_dir >>/dev/null 2>&1
-    ${install_dir}/eclipse-installer/eclipse-inst -nosplash -application org.eclipse.oomph.console.application \
-    -vmargs \
-    -Doomph.configuration.setups="$cfg" \
-    -D_oomph.product.id=$oomph_product \
-    -D_oomph.project.id=$oomph_project \
-    -Doomph.installation.location=$project_dir \
-    -Doomph.workspace.location=$project_dir/ws \
-    -Doomph.installer.verbose=true \
-    -Doomph.installer.layout=text
+    ${install_dir}/eclipse-installer/eclipse-inst \
+      -configuration $project_dir/inst_cfg \
+      -data $project_dir/inst_ws \
+      -nosplash \
+      -application org.eclipse.oomph.console.application \
+      -vmargs \
+      -Doomph.configuration.setups=$cfg \
+      -D_oomph.product.id=$oomph_product \
+      -D_oomph.project.id=$oomph_project \
+      -Doomph.installation.location=$project_dir \
+      -Doomph.workspace.location=$project_dir/ws \
+      -Doomph.installer.verbose=true \
+      -Doomph.installer.layout=text
     
     retVal=$?
     if [ $retVal -ne 0 ]; then
