@@ -15,10 +15,9 @@ fi
 ## gradle short dependency
 version=1.0.4
 
-# one of [win32.win32.x86_64|linux.gtk.x86_64]
-#sys_props=win32.win32.x86_64
-sys_props=linux.gtk.x86_64
-archive_type=tar.gz
+# one of [win32.win32.x86_64|gtk.linux.x86_64|macosx.cocoa.x86_64]
+sysprops=macosx.cocoa.x86_64
+archive=tar.gz
 
 install_dir=${script_dir}/target/oomph.console
 wrk_dir=${script_dir}/wrk
@@ -26,9 +25,9 @@ wrk_dir=${script_dir}/wrk
 headline "maven provisioning of eclipse-installer console product locally"
 # https://maven.apache.org/plugins/maven-dependency-plugin/usage.html#dependency:get
 mvn org.apache.maven.plugins:maven-dependency-plugin:3.3.0:unpack \
--Dartifact=com.github.a-langer:org.eclipse.oomph.console.product:$version:$archive_type:$sys_props \
--DoutputDirectory=${install_dir} \
--Dproject.basedir=./
+    -Dartifact=com.github.a-langer:org.eclipse.oomph.console.product:$version:$archive:$sysprops \
+    -DoutputDirectory=${install_dir} \
+    -Dproject.basedir=./
 
 #config_oomph=https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/configurations/OomphConfiguration.setup
 declare -a configs=(
