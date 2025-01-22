@@ -15,7 +15,7 @@
       name="bnd.workspace"
       label="bnd Workspace">
     <stream
-        href="ecf/EmptyBndtoolsECF.setup#//@streams[name='7.0.0']"/>
+        href="ecf/EmptyBndtoolsECF.setup#//@streams[name='latest-build-snapshot']"/>
     <description>The bnd workspace provides cool stuff.</description>
   </workspace>
   <description>The bnd configuration provides cool stuff.</description>
