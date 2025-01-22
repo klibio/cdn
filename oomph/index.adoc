@@ -1,4 +1,4 @@
-= klib.io - oomph setups
+= cdn.klib.io - oomph setups
 :lang: en
 :favicon:
 

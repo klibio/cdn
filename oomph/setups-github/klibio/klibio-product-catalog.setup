@@ -39,8 +39,8 @@
   </setupTask>
   <product name="klibio.osgi">
     <version
-        name="2023-12"
-        label="2023-12"
+        name="2024-12"
+        label="2024-12"
         requiredJavaVersion="17">
       <annotation
           source="http://www.eclipse.org/oomph/setup/BrandingInfo">
@@ -59,17 +59,17 @@
       </annotation>
       <setupTask
           xsi:type="setup.p2:P2Task"
-          label="Eclipse IDE for Java Developers (2023-12)">
+          label="Eclipse IDE for Java Developers (2024-12)">
         <requirement
             name="epp.package.java"
-            versionRange="[4.30.0,5.0.0)"
-            filter="(|(&amp;(osgi.arch=aarch64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=aarch64)(osgi.os=macosx)(osgi.ws=cocoa))(&amp;(osgi.arch=x86_64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=x86_64)(osgi.os=macosx)(osgi.ws=cocoa))(&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32)))"/>
+            versionRange="[4.34.0,5.0.0)"
+            filter="(|(&amp;(osgi.arch=aarch64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=aarch64)(osgi.os=macosx)(osgi.ws=cocoa))(&amp;(osgi.arch=aarch64)(osgi.os=win32)(osgi.ws=win32))(&amp;(osgi.arch=riscv64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=x86_64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=x86_64)(osgi.os=macosx)(osgi.ws=cocoa))(&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32)))"/>
         <requirement
             name="org.eclipse.platform.feature.group"
-            versionRange="[4.30.0,5.0.0)"/>
+            versionRange="[4.34.0,5.0.0)"/>
         <requirement
             name="org.eclipse.rcp.feature.group"
-            versionRange="[4.30.0,5.0.0)"/>
+            versionRange="[4.34.0,5.0.0)"/>
         <requirement
             name="org.eclipse.buildship.feature.group"/>
         <requirement
@@ -107,17 +107,21 @@
         <requirement
             name="org.eclipse.mylyn.reviews.feature.feature.group"/>
         <requirement
-            name="org.eclipse.mylyn.wikitext_feature.feature.group"/>
+            name="org.eclipse.mylyn.wikitext.feature.feature.group"/>
         <requirement
             name="org.eclipse.tips.feature.feature.group"/>
         <requirement
             name="org.eclipse.tm.terminal.feature.feature.group"/>
         <requirement
+            name="org.eclipse.tm4e.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.tm4e.language_pack.feature.feature.group"/>
+        <requirement
             name="org.eclipse.wildwebdeveloper.xml.feature.feature.group"/>
         <repository
-            url="https://download.eclipse.org/technology/epp/packages/2023-12/202312011200"/>
+            url="https://download.eclipse.org/technology/epp/packages/2024-12/202411281200"/>
         <repository
-            url="https://download.eclipse.org/releases/2023-12/202312061001">
+            url="https://download.eclipse.org/releases/2024-12/202412041000">
           <annotation
               source="http://www.eclipse.org/oomph/setup/ReleaseTrain"/>
         </repository>
@@ -166,8 +170,8 @@
       </setupTask>
     </version>
     <version
-        name="2023-12-bndtools"
-        label="2023-12-bndtools"
+        name="2024-12-bndtools"
+        label="2024-12-bndtools"
         requiredJavaVersion="17">
       <annotation
           source="http://www.eclipse.org/oomph/setup/BrandingInfo">
@@ -185,18 +189,43 @@
         </detail>
       </annotation>
       <setupTask
+          xsi:type="setup:CompoundTask"
+          name="bndtools">
+        <setupTask
+            xsi:type="setup.p2:P2Task"
+            label="bndtools">
+          <requirement
+              name="bndtools.main.feature.feature.group"/>
+          <requirement
+              name="bndtools.m2e.feature.feature.group"/>
+          <requirement
+              name="bndtools.pde.feature.feature.group"/>
+          <repository
+              url="https://bndtools.org/bndtools.p2.repo/7.1.0/"/>
+        </setupTask>
+        <setupTask
+            xsi:type="setup.p2:P2Task"
+            label="JRE">
+          <requirement
+              name="a.jre.org.eclipse.justj.openjdk.hotspot.jre.full"
+              versionRange="[17.0.0,17.0.0]"/>
+          <repository
+              url="https://download.eclipse.org/justj/jres/17/updates/release"/>
+        </setupTask>
+      </setupTask>
+      <setupTask
           xsi:type="setup.p2:P2Task"
-          label="Eclipse IDE for Java Developers (2023-12)">
+          label="Eclipse IDE for Java Developers (2024-12)">
         <requirement
             name="epp.package.java"
-            versionRange="[4.30.0,5.0.0)"
-            filter="(|(&amp;(osgi.arch=aarch64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=aarch64)(osgi.os=macosx)(osgi.ws=cocoa))(&amp;(osgi.arch=x86_64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=x86_64)(osgi.os=macosx)(osgi.ws=cocoa))(&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32)))"/>
+            versionRange="[4.34.0,5.0.0)"
+            filter="(|(&amp;(osgi.arch=aarch64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=aarch64)(osgi.os=macosx)(osgi.ws=cocoa))(&amp;(osgi.arch=aarch64)(osgi.os=win32)(osgi.ws=win32))(&amp;(osgi.arch=riscv64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=x86_64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=x86_64)(osgi.os=macosx)(osgi.ws=cocoa))(&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32)))"/>
         <requirement
             name="org.eclipse.platform.feature.group"
-            versionRange="[4.30.0,5.0.0)"/>
+            versionRange="[4.34.0,5.0.0)"/>
         <requirement
             name="org.eclipse.rcp.feature.group"
-            versionRange="[4.30.0,5.0.0)"/>
+            versionRange="[4.34.0,5.0.0)"/>
         <requirement
             name="org.eclipse.buildship.feature.group"/>
         <requirement
@@ -234,45 +263,24 @@
         <requirement
             name="org.eclipse.mylyn.reviews.feature.feature.group"/>
         <requirement
-            name="org.eclipse.mylyn.wikitext_feature.feature.group"/>
+            name="org.eclipse.mylyn.wikitext.feature.feature.group"/>
         <requirement
             name="org.eclipse.tips.feature.feature.group"/>
         <requirement
             name="org.eclipse.tm.terminal.feature.feature.group"/>
         <requirement
+            name="org.eclipse.tm4e.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.tm4e.language_pack.feature.feature.group"/>
+        <requirement
             name="org.eclipse.wildwebdeveloper.xml.feature.feature.group"/>
         <repository
-            url="https://download.eclipse.org/technology/epp/packages/2023-12/202312011200"/>
+            url="https://download.eclipse.org/technology/epp/packages/2024-12/202411281200"/>
         <repository
-            url="https://download.eclipse.org/releases/2023-12/202312061001">
+            url="https://download.eclipse.org/releases/2024-12/202412041000">
           <annotation
               source="http://www.eclipse.org/oomph/setup/ReleaseTrain"/>
         </repository>
-      </setupTask>
-      <setupTask
-          xsi:type="setup:CompoundTask"
-          name="bndtools">
-        <setupTask
-            xsi:type="setup.p2:P2Task"
-            label="bndtools">
-          <requirement
-              name="bndtools.main.feature.feature.group"/>
-          <requirement
-              name="bndtools.m2e.feature.feature.group"/>
-          <requirement
-              name="bndtools.pde.feature.feature.group"/>
-          <repository
-              url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
-        </setupTask>
-        <setupTask
-            xsi:type="setup.p2:P2Task"
-            label="JRE">
-          <requirement
-              name="a.jre.org.eclipse.justj.openjdk.hotspot.jre.full"
-              versionRange="[17.0.0,17.0.0]"/>
-          <repository
-              url="https://download.eclipse.org/justj/jres/17/updates/release"/>
-        </setupTask>
       </setupTask>
       <setupTask
           xsi:type="setup.p2:P2Task"

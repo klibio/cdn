@@ -79,7 +79,7 @@
         <requirement
             name="bndtools.pde.feature.feature.group"/>
         <repository
-            url="https://cdn.klib.io/org.bndtools.p2/7.0.0/"/>
+            url="https://bndtools.org/bndtools.p2.repo/7.0.0/"/>
       </setupTask>
       <setupTask
           xsi:type="setup.p2:P2Task"
@@ -123,7 +123,7 @@
         <requirement
             name="bndtools.pde.feature.feature.group"/>
         <repository
-            url="https://cdn.klib.io/org.bndtools.p2/6.4.1/"/>
+            url="https://bndtools.org/bndtools.p2.repo/6.4.1/"/>
       </setupTask>
       <setupTask
           xsi:type="setup.p2:P2Task"

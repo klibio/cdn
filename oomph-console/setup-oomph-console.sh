@@ -15,12 +15,17 @@ fi
 ## gradle short dependency
 version=1.0.4
 
-# one of [win32.win32.x86_64|gtk.linux.x86_64|macosx.cocoa.x86_64]
-sysprops=macosx.cocoa.x86_64
-archive=tar.gz
+# one of [win32.win32.x86_64|linux.gtk.x86_64]
+sys_props=win32.win32.x86_64
+archive_type=zip
+eclipse_inst_exe=eclipse-inst.exe
+
+#sys_props=linux.gtk.x86_64
+#archive_type=tar.gz
+#eclipse_inst_exe=eclipse-installer/eclipse-inst
 
 install_dir=${script_dir}/target/oomph.console
-wrk_dir=${script_dir}/wrk
+setup_dir=${script_dir}/setups
 
 headline "maven provisioning of eclipse-installer console product locally"
 # https://maven.apache.org/plugins/maven-dependency-plugin/usage.html#dependency:get
@@ -45,13 +50,13 @@ do
     headline "execute eclipse-installer for $project_setup"
     echo "be patient for installation, cause it will take a while"
     # see documentation at https://github.com/a-langer/eclipse-oomph-console
-    project_dir=$wrk_dir/$project_setup
+    project_dir=$setup_dir/$project_setup
     oomph_product=epp.package.committers
     oomph_project=oomph
-    mkdir -p $wrk_dir >>/dev/null 2>&1
-    ${install_dir}/eclipse-installer/eclipse-inst \
-      -configuration $project_dir/inst_cfg \
-      -data $project_dir/inst_ws \
+    mkdir -p $setup_dir >>/dev/null 2>&1
+    ${install_dir}/${eclipse_inst_exe} \
+      -configuration $project_dir/oomph/cfg \
+      -data $project_dir/oomph/ws \
       -nosplash \
       -application org.eclipse.oomph.console.application \
       -vmargs \
@@ -71,7 +76,7 @@ do
     padout "installation is available inside $project_dir/eclipse"
 
     headline "logfiles  of $project_setup"
-    find "${install_dir}/eclipse-installer" -type f -name "*.log" -print0 | while IFS= read -r -d '' file; do
+    find "${install_dir}" -type f -name "*.log" -print0 | while IFS= read -r -d '' file; do
         echo "output logfile: $file"
         echo "========================================"
         cat "$file"
