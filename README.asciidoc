@@ -4,6 +4,8 @@ This repo contains p2 repos and oomph setups for provisioning purposes.
 
 image:https://github.com/klibio/cdn/actions/workflows/publish.yml/badge.svg[link="https://github.com/klibio/cdn/actions/workflows/publish.yml",alt="Publish to GitHub Pages",window=_blank]
 
+Access published page via https://cdn.klib.io[https://cdn.klib.io] 
+
 == oomph-usage
 
 experiments on oomph / eclipse-installer usages

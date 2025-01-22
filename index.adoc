@@ -1,4 +1,4 @@
-= klib.io CDN
+= cdn.klib.io
 :lang: en
 
 == CDN for klib.io

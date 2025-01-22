@@ -1,6 +1,5 @@
 = cdn.klib.io - oomph setups
 :lang: en
-:favicon:
 
 == oomph/EclipseInstaller setups links
 
