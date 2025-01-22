@@ -10,7 +10,7 @@ link:oomph/index.html[oomph/EclipseInstaller configurations]
 === p2 repositories
 
 * link:org.bndtools.p2/6.4.1/[https://bndtools.org/bndtools.p2.repo/6.4.1/]
-* link:org.bndtools.p2/7.0.0/[https://bndtools.org/bndtools.p2.repo/7.0.0/]
+* link:org.bndtools.p2/7.0.0/[https://bndtools.org/bndtools.p2.repo/7.1.0/]
 
 == Sizer
 

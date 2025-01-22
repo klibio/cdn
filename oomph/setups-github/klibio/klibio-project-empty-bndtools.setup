@@ -79,7 +79,7 @@
         <requirement
             name="bndtools.pde.feature.feature.group"/>
         <repository
-            url="https://bndtools.org/bndtools.p2.repo/7.0.0/"/>
+            url="https://bndtools.org/bndtools.p2.repo/7.1.0/"/>
       </setupTask>
       <setupTask
           xsi:type="setup.p2:P2Task"
