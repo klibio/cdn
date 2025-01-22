@@ -54,14 +54,6 @@
         <repository
             url="https://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
       </setupTask>
-      <setupTask
-          xsi:type="setup:CompoundTask"
-          name="org.bndtools.templating.gitrepo">
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.bndtools.templating.gitrepo/githubRepos"
-            value="bndtools/workspace;branch=&quot;origin/7.0&quot;,bndtools/bndtools.workspace.min,ECF/bndtools.workspace"/>
-      </setupTask>
     </setupTask>
   </stream>
   <stream name="7.0.0"
@@ -98,14 +90,6 @@
           name="v20240114-0141.bndtools"/>
       <repository
           url="https://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="org.bndtools.templating.gitrepo">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.bndtools.templating.gitrepo/githubRepos"
-          value="bndtools/workspace;branch=&quot;origin/7.0&quot;,bndtools/bndtools.workspace.min,ECF/bndtools.workspace"/>
     </setupTask>
   </stream>
   <stream name="6.4.1"
@@ -145,14 +129,6 @@
             name="v20240114-0141.bndtools"/>
         <repository
             url="https://download.eclipse.org/rt/ecf/3.14.41/site.p2"/>
-      </setupTask>
-      <setupTask
-          xsi:type="setup:CompoundTask"
-          name="org.bndtools.templating.gitrepo">
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.bndtools.templating.gitrepo/githubRepos"
-            value="bndtools/workspace;branch=&quot;origin/7.0&quot;,bndtools/bndtools.workspace.min,ECF/bndtools.workspace"/>
       </setupTask>
     </setupTask>
   </stream>
