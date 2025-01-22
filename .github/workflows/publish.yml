@@ -27,8 +27,8 @@ jobs:
       uses: stCarolas/setup-maven@v5
       with:
         maven-version: 3.9.6
-    - name: run test installations
-      run: oomph-console/setup-oomph-console.sh
+#    - name: run test installations
+#      run: oomph-console/setup-oomph-console.sh
     # update github pages
     - name: Configure Pages
       id: pages
