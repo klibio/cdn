@@ -34,6 +34,9 @@
             url="https://bndtools.jfrog.io/bndtools/update-snapshot"/>
       </setupTask>
     </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="ECF">
       <setupTask
           xsi:type="setup.p2:P2Task"
           label="ECF Bndtools Support"
@@ -127,6 +130,9 @@
             url="https://bndtools.org/bndtools.p2.repo/6.4.1/"/>
       </setupTask>
     </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="ECF">
       <setupTask
           xsi:type="setup.p2:P2Task"
           label="ECF Bndtools Support"
