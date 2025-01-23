@@ -37,6 +37,19 @@
           value="bndtools.perspective"/>
     </setupTask>
   </setupTask>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      name="issue-org.apache.commons.logging">
+    <setupTask
+        xsi:type="setup.p2:P2Task">
+      <requirement
+          name="org.apache.commons.logging"
+          versionRange="[1.2.0.v20180409-1502,1.2.0.v20180409-1502]"
+          optional="true"
+          max="0"/>
+    </setupTask>
+    <description>https://github.com/eclipse-orbit/orbit-simrel/issues/40#issuecomment-2602063640</description>
+  </setupTask>
   <product name="klibio.osgi">
     <version
         name="2024-12"
