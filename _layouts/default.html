@@ -4,6 +4,7 @@
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
 
 <head>
+    <link rel="icon" type="image/x-icon" href="{{page.root}}favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{page.title}}</title>
@@ -122,9 +123,9 @@
             <hr>
             <div class="row">
                 <div class="large-12 columns">
-                    <p>&#169; Kirschners GmbH 2025 - last updated: {{ "now" | date: "%Y-%m-%d %H:%M:%S" }} - git-sha: <a
-                            href="https://github.com/klibio/cdn/tree/{{site.github.build_revision}}" target="_blank"
-                            rel="noopener">{{site.github.build_revision}}</a></p>
+            <p>&#169; Kirschners GmbH 2025 - last updated: {{ "now" | date: "%Y-%m-%d %H:%M:%S" }} - git-sha: <a
+                href="https://github.com/klibio/cdn/tree/{{site.github.build_revision}}" target="_blank"
+                rel="noopener">{{site.github.build_revision | slice: 0, 7}}</a> - <a href="{{page.root}}index_list.html" target="_blank">index</a></p>
                 </div>
             </div>
         </div>
