@@ -1,0 +1,11 @@
+# Enable Dependabot version updates for GitHub Actions and Ruby gems
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "daily"
