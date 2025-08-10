@@ -50,7 +50,7 @@ jobs:
 
     # addding directory listings
     - name: "backup existing index.html"
-      run: 
+      run: |
         env | sort
         pwd
         ls -laR
