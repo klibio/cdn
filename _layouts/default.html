@@ -2,72 +2,93 @@
 <!--[if IE 9]>
 <html class="lt-ie10" lang="en"> <![endif]-->
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{page.title}}</title>
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="description"
+        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="author" content="Peter Kirschner">
     <meta name="copyright" content="Maybe consider a Creative Commons license">
     <link rel="stylesheet" href="{{page.root}}css/foundation.css">
-    <style>pre > code { border: 0 }</style>
+    <style>
+        pre>code {
+            border: 0
+        }
+    </style>
     <link rel="stylesheet" href="{{page.root}}css/font-awesome.css">
     <link rel="stylesheet" href="{{page.root}}css/coderay.css">
     <link rel="stylesheet" href="{{page.root}}css/asciidoctor.css">
-            <!-- Dark/Light mode toggle button -->
-            <button id="darkModeToggle" style="position:fixed;top:1em;right:1em;z-index:9999;">🌙/☀️</button>
-            <script>
-                // Dark/Light mode toggle logic
-                const btn = document.getElementById('darkModeToggle');
-                const setMode = (mode) => {
-                    document.body.classList.remove('dark-mode', 'light-mode');
-                    if (mode === 'dark') document.body.classList.add('dark-mode');
-                    if (mode === 'light') document.body.classList.add('light-mode');
-                    localStorage.setItem('color-mode', mode);
-                };
-                // On load, set mode from localStorage or system
-                const saved = localStorage.getItem('color-mode');
-                if (saved) setMode(saved);
-                btn.onclick = () => {
-                    const isDark = document.body.classList.contains('dark-mode');
-                    setMode(isDark ? 'light' : 'dark');
-                };
-            </script>
+    <!-- Dark/Light mode toggle button -->
+    <button id="colorModeSwitch" aria-label="Toggle dark mode"
+        style="position:fixed;top:1em;right:1em;z-index:9999;padding:0.3em 0.8em;font-size:1.2em;cursor:pointer;border:none;outline:none;transition:background 0.2s;">&#9788;</button>
+    <script>
+        // Modern accessible dark/light mode toggle
+        const switchBtn = document.getElementById('colorModeSwitch');
+        function setColorMode(mode) {
+            document.body.classList.remove('dark-mode', 'light-mode');
+            if (mode === 'dark') {
+                document.body.classList.add('dark-mode');
+                switchBtn.innerHTML = '<span style="display:inline-block;width:1.5em;height:1.5em;background:#111;color:#fff;border-radius:50%;text-align:center;line-height:1.5em;font-size:1.1em;">&#9789;</span>';
+                switchBtn.setAttribute('aria-label', 'Switch to light mode');
+            } else {
+                document.body.classList.add('light-mode');
+                switchBtn.innerHTML = '<span style="display:inline-block;width:1.5em;height:1.5em;background:#fff;color:#111;border-radius:50%;text-align:center;line-height:1.5em;font-size:1.1em;border:1px solid #ccc;">&#9728;</span>';
+                switchBtn.setAttribute('aria-label', 'Switch to dark mode');
+            }
+            localStorage.setItem('color-mode', mode);
+        }
+        // On load, set mode from localStorage or system
+        const savedMode = localStorage.getItem('color-mode');
+        if (savedMode) {
+            setColorMode(savedMode);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setColorMode('dark');
+        } else {
+            setColorMode('light');
+        }
+        switchBtn.onclick = () => {
+            const isDark = document.body.classList.contains('dark-mode');
+            setColorMode(isDark ? 'light' : 'dark');
+        };
+    </script>
     <script src="{{page.root}}js/vendor/modernizr.js"></script>
     <script src="{{page.root}}js/toc.js"></script>
 </head>
+
 <body>
 
-<!-- Nav Bar -->
-<nav class="top-bar" data-topbar>
-    <ul class="title-area">
+    <!-- Nav Bar -->
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
             <!-- Title Area -->
             <li class="name">
                 <h1>
                     <a href="{{page.root}}">{{site.title}}</a>
                 </h1>
             </li>
-<!--
+            <!--
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 -->
         </ul>
     </nav>
-<!-- End Nav -->
+    <!-- End Nav -->
 
-<!-- Main Page Content and Sidebar -->
-<div class="row">
+    <!-- Main Page Content and Sidebar -->
+    <div class="row">
 
-    <!-- Main Blog Content -->
-    <div class="large-9 columns" role="content">
+        <!-- Main Blog Content -->
+        <div class="large-9 columns" role="content">
 
-        {{ content }}
+            {{ content }}
 
-    </div>
+        </div>
 
-    <!-- End Main Content -->
+        <!-- End Main Content -->
 
-    <!-- Sidebar -->
-<!--
+        <!-- Sidebar -->
+        <!--
 
     <aside class="large-3 columns">
         
@@ -89,30 +110,33 @@
         
 -->
         <!-- End Sidebar -->
-</div>
+    </div>
 
-<!-- End Main Content and Sidebar -->
+    <!-- End Main Content and Sidebar -->
 
 
-<!-- Footer -->
+    <!-- Footer -->
 
-<footer class="row">
-    <div class="large-12 columns">
-        <hr>
-        <div class="row">
-            <div class="large-12 columns">
-                <p>&#169; Kirschners GmbH 2025 - last updated: {{ "now" | date: "%Y-%m-%d %H:%M:%S" }} - git-sha: <a href="https://github.com/klibio/cdn/tree/{{site.github.build_revision}}">{{site.github.build_revision}}</a></p>
+    <footer class="row">
+        <div class="large-12 columns">
+            <hr>
+            <div class="row">
+                <div class="large-12 columns">
+                    <p>&#169; Kirschners GmbH 2025 - last updated: {{ "now" | date: "%Y-%m-%d %H:%M:%S" }} - git-sha: <a
+                            href="https://github.com/klibio/cdn/tree/{{site.github.build_revision}}" target="_blank"
+                            rel="noopener">{{site.github.build_revision}}</a></p>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script src="{{page.root}}js/vendor/jquery.js"></script>
-<script src="{{page.root}}js/foundation.min.js"></script>
-<script>
-$(document).foundation();
-var doc = document.documentElement;
-doc.setAttribute('data-useragent', navigator.userAgent);
-</script>
+    <script src="{{page.root}}js/vendor/jquery.js"></script>
+    <script src="{{page.root}}js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+        var doc = document.documentElement;
+        doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
 </body>
+
 </html>

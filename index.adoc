@@ -5,5 +5,5 @@
 
 === oomph setups
 
-link:oomph/index.html[oomph/EclipseInstaller configurations]
-link:bndtools setups[https://bndtools.org/bndtools.p2.repo/]
+* link:oomph/index.html[oomph/EclipseInstaller configurations,window=_blank]
+* link:https://bndtools.org/bndtools.p2.repo/[bndtools setups,window=_blank]

@@ -1,3 +1,14 @@
+ul, ol {
+	display: block;
+	margin: 1em 0 1em 2em;
+	padding-left: 2em;
+	list-style-type: disc;
+}
+
+ul li, ol li {
+	display: list-item;
+	margin: 0.5em 0;
+}
 /* --- Dark/Light mode toggle styles --- */
 .dark-mode {
 	background: #181818 !important;

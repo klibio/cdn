@@ -32,11 +32,19 @@ jobs:
 #    - name: run test installations
 #      run: oomph-console/setup-oomph-console.sh
 
+# directory listings
+    - name: "[Deploy] Delete existing directory listings"
+      run: rm -rf **/index.html
+      working-directory: .
     - name: Generate Directory Listings
       uses: jayanta525/github-pages-directory-listing@v4.0.0
       with:
-        FOLDER: '.'
+        FOLDER: 'oomph'
+    - name: "[Deploy] Delete existing directory listings"
+      run: mv index.html index_list.html
+      working-directory: .
 
+# pages stuff
     - name: Configure Pages
       id: pages
       uses: actions/configure-pages@v5
