@@ -1,9 +1,0 @@
-= Sizer 4.0 by brianapps.net
-
-* https://www.brianapps.net/sizer4/[Homepage,window=_blank]
-
-* https://www.brianapps.net/sizer4/rail.html[Sizer Railroad Diagrams,window=_blank]
-
-* link:SizerExport.xml[klib.io - config file,window=_blank]
-
-image::https://www.brianapps.net/sizer4/screen.png[Sizer Config]
