@@ -50,7 +50,11 @@ jobs:
 
     # addding directory listings
     - name: "backup existing index.html"
-      run: mv index.html BAK_index.html
+      run: 
+        env | sort
+        pwd
+        ls -laR
+        mv index.html BAK_index.html
       working-directory: _site
     - name: "[Deploy] Delete existing directory listings"
       run: rm -rf **/index.html
