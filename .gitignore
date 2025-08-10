@@ -32,3 +32,4 @@ oomph-console/wrk/
 oomph/setups/
 Gemfile.lock
 _site/
+_workdir/
