@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 4.3.0'
+gem 'jekyll', '~> 4.4.1'
 gem 'coderay', '~> 1.1.0'
 gem 'rake-jekyll', '~> 1.1.0'
 gem 'csv', '~> 3.3.5'
