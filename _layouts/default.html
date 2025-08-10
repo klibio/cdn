@@ -14,6 +14,25 @@
     <link rel="stylesheet" href="{{page.root}}css/font-awesome.css">
     <link rel="stylesheet" href="{{page.root}}css/coderay.css">
     <link rel="stylesheet" href="{{page.root}}css/asciidoctor.css">
+            <!-- Dark/Light mode toggle button -->
+            <button id="darkModeToggle" style="position:fixed;top:1em;right:1em;z-index:9999;">🌙/☀️</button>
+            <script>
+                // Dark/Light mode toggle logic
+                const btn = document.getElementById('darkModeToggle');
+                const setMode = (mode) => {
+                    document.body.classList.remove('dark-mode', 'light-mode');
+                    if (mode === 'dark') document.body.classList.add('dark-mode');
+                    if (mode === 'light') document.body.classList.add('light-mode');
+                    localStorage.setItem('color-mode', mode);
+                };
+                // On load, set mode from localStorage or system
+                const saved = localStorage.getItem('color-mode');
+                if (saved) setMode(saved);
+                btn.onclick = () => {
+                    const isDark = document.body.classList.contains('dark-mode');
+                    setMode(isDark ? 'light' : 'dark');
+                };
+            </script>
     <script src="{{page.root}}js/vendor/modernizr.js"></script>
     <script src="{{page.root}}js/toc.js"></script>
 </head>
