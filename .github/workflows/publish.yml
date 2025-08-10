@@ -32,7 +32,7 @@ jobs:
     # update github pages
     - name: Configure Pages
       id: pages
-      uses: actions/configure-pages@8747d8cd7632611ad6060b528f3e0f654c98869c
+      uses: actions/configure-pages@v3
     - name: Install Ruby and Jekyll
       uses: ruby/setup-ruby@v1
       with:
@@ -44,7 +44,7 @@ jobs:
       env:
         JEKYLL_ENV: production
     - name: Upload Artifacts
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v4
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v2
