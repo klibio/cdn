@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.0.9">
+  <diagram name="Page-1" id="7nblWvsg_j4EFaF3KGV3">
+    <mxGraphModel dx="1424" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ULQDDNTSdQQfeVTNQv76-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="ULQDDNTSdQQfeVTNQv76-1" target="ULQDDNTSdQQfeVTNQv76-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ULQDDNTSdQQfeVTNQv76-1" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ULQDDNTSdQQfeVTNQv76-3" value="cdn.klib.io" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.website;" vertex="1" parent="1">
+          <mxGeometry x="270" y="105.5" width="59" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="ULQDDNTSdQQfeVTNQv76-7" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ULQDDNTSdQQfeVTNQv76-5" target="ULQDDNTSdQQfeVTNQv76-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ULQDDNTSdQQfeVTNQv76-5" value="github.com/klibio/cdn" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.git_repository;fontFamily=Helvetica;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="630" y="105.5" width="59" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="ULQDDNTSdQQfeVTNQv76-10" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ULQDDNTSdQQfeVTNQv76-6" target="ULQDDNTSdQQfeVTNQv76-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ULQDDNTSdQQfeVTNQv76-6" value="&amp;lt;github-action&amp;gt;&lt;br&gt;publish" style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.process;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="450" y="105.5" width="59" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="ULQDDNTSdQQfeVTNQv76-12" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="ULQDDNTSdQQfeVTNQv76-11" target="ULQDDNTSdQQfeVTNQv76-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ULQDDNTSdQQfeVTNQv76-11" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="890" y="100" width="30" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
